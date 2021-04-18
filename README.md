@@ -1,0 +1,1 @@
+## Warigari NativeScript-Vue App 🛍
