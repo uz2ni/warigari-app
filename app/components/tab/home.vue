@@ -1,5 +1,7 @@
 <template>
-  <label text="홈, 베스트, 신상"></label>
+  <Page actionBarHidden="true" backgroundSpanUnderStatusBar="true">
+    <label text="홈, 베스트, 신상"></label>
+  </Page>
 </template>
 
 <script>
