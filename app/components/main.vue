@@ -1,24 +1,26 @@
 <template>
   <Page actionBarHidden="true" backgroundSpanUnderStatusBar="true">
-    <StackLayout backgroundColor="#3c495e">
-      <Button text="모아보기" @tap="goToHomePage" backgroundColor="blue" />
-      <Button text="즐겨찾기" backgroundColor="red" />
-      <Button text="내정보" backgroundColor="green" />
-    </StackLayout>
+    <TabView>
+      <TabViewItem title="Home"><Home/></TabViewItem>
+      <TabViewItem title="Shop"><Shop/></TabViewItem>
+      <TabViewItem title="Collect"><Collect/></TabViewItem>
+      <TabViewItem title="Heart"><Heart/></TabViewItem>
+      <TabViewItem title="My"><My/></TabViewItem>
+    </TabView>
   </Page>
 </template>
 
 <script>
-import Home from './tab/home.vue'
+import Home from './tab/Home'
+import Shop from './tab/Shop'
+import Collect from './tab/Collect'
+import Heart from './tab/Heart'
+import My from './tab/My'
+
 export default {
   name: "main",
   components: {
-    Home
-  },
-  methods: {
-    goToHomePage() {
-      this.$navigateTo(Home);
-    }
+    Home, Shop, Collect, Heart, My
   }
 }
 </script>

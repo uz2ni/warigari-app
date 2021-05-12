@@ -1,10 +1,10 @@
 <template>
-  <label text="홈, 베스트, 신상"></label>
+  <label text="마이페이지"></label>
 </template>
 
 <script>
 export default {
-  name: "home"
+  name: "my"
 }
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <label text="홈, 베스트, 신상"></label>
+  <label text="쇼핑몰 랭킹, 즐겨찾기"></label>
 </template>
 
 <script>
