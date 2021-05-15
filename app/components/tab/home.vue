@@ -1,7 +1,9 @@
 <template>
-  <label text="홈, 베스트, 신상"></label>
-  <label v-bind:text="test2"></label>
-  <label v-bind:text="test"></label>
+  <ListView for="value in tests">
+    <v-template>
+      <Label>{{value["nickname"]}} / {{value["weight"]}} / {{value["idx"]}} / {{value["height"]}}</Label>
+    </v-template>
+  </ListView>
 </template>
 
 <script>
@@ -10,14 +12,17 @@ export default {
   name: "home",
   data() {
     return {
-      test: 'test',
-      test2: 'hello world'
+      tests: []
     }
   },
   created() {
     axios.get('https://it-event-back.herokuapp.com/')
-        .then(response => {
-          this.test = response.data
+        .then((response)=> {
+          let data = response.data;
+          for(let t in data) {
+            console.log(data[t]);
+            this.tests.push(data[t]);
+          }
         })
         .catch(error => console.log(error));
   }
